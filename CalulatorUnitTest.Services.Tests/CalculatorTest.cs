@@ -11,5 +11,13 @@ namespace CalulatorUnitTest.Services.Tests
         {
             _calc = new Calculator();
         }
+
+        //method to make sure add function in calculator class works
+        [TestMethod]
+        public void ShouldAddTwoNumbers()
+        {
+            int res = _calc.Add(5, 3);
+            Assert.AreEqual(res, 8);
+        }
     }
 }
