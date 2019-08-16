@@ -19,5 +19,12 @@ namespace CalulatorUnitTest.Services.Tests
             int res = _calc.Add(5, 3);
             Assert.AreEqual(res, 8);
         }
+
+        //method to ensure the Sub function in the calculator class works
+        [TestMethod]
+        public void SouldSubtracttwoNumbers()
+        {
+
+        }
     }
 }
