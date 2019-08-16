@@ -3,11 +3,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CalulatorUnitTest.Services.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class CalculatorTest
     {
-        [TestMethod]
-        public void TestMethod1()
+        Calculator _calc;
+
+        public CalculatorTest()
         {
+            _calc = new Calculator();
         }
     }
 }
