@@ -24,7 +24,8 @@ namespace CalulatorUnitTest.Services.Tests
         [TestMethod]
         public void SouldSubtracttwoNumbers()
         {
-
+            int res = _calc.Sub(5, 3);
+            Assert.AreEqual(res, 2);
         }
     }
 }
