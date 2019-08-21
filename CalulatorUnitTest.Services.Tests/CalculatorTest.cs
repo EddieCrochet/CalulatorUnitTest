@@ -27,5 +27,26 @@ namespace CalulatorUnitTest.Services.Tests
             int res = _calc.Sub(5, 3);
             Assert.AreEqual(res, 2);
         }
+
+        [TestMethod]
+        public void PressEquals_TwoPlusTwo_ReturnsFour()
+        {
+            // Arrange
+            decimal value1 = 2m;
+            decimal value2 = 2m;
+            decimal expected = 4m;
+            var calculator = new Calculator();
+
+            // Act
+            calculator.Enter(value1);
+            calculator.PressPlus();
+            calculator.Enter(value2);
+            calculator.PressEquals();
+            decimal actual = calculator.Display;
+
+            // Assert
+            Assert.AreEqual(expected, actual,
+                            "When adding {0} + {1}, expected {2} but found {3}.", value1, value2, expected, actual);
+        }
     }
 }
